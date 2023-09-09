@@ -4,7 +4,7 @@ function validateForm() {
 
     // Retrieve users from local storage
     var users = JSON.parse(localStorage.getItem("users")) || [];
-
+    var loggedUser = JSON.parse(localStorage.getItem("LoggedIn")) || [];
     // Find user by email
     var user = users.find(function (user) {
         return user.email === email;
@@ -23,13 +23,21 @@ function validateForm() {
         return false; // Prevent form submission
     }
 
+    // LoggedIn User Detail
+    var userData = {
+        email: email,
+        username: user.username,
+        password: password
+    };
+    loggedUser.push(userData);
+    localStorage.setItem("LoggedIn", JSON.stringify(loggedUser));
     // Login successful, display success message
     displaySuccess("Login successful!");
 
     // Redirect to the dashboard or home page after 2 seconds
-    // setTimeout(function () {
-    //     window.location.href = "/dashboard"; // Change the URL to your dashboard or home page
-    // }, 2000); // Delay the redirection for 2 seconds
+    setTimeout(function () {
+        window.location.href = "/dashboard/index.html"; // Change the URL to your dashboard or home page
+    }, 2000); // Delay the redirection for 2 seconds
 
     return false; // Prevent form submission (for demonstration purposes)
 }
@@ -40,9 +48,12 @@ function displayError(id, message) {
     errorElement.classList.add("d-block");
 }
 
+// function displaySuccess(message) {
+//     var alertMessage = document.getElementById("alertMessage");
+//     alertMessage.textContent = message;
+//     alertMessage.classList.remove("alert-danger", "d-none");
+//     alertMessage.classList.add("alert-success", "d-block");
+// }
 function displaySuccess(message) {
-    var alertMessage = document.getElementById("alertMessage");
-    alertMessage.textContent = message;
-    alertMessage.classList.remove("alert-danger", "d-none");
-    alertMessage.classList.add("alert-success", "d-block");
+    swal(message, "Hurray!!", "success");
 }
