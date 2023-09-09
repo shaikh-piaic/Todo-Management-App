@@ -62,11 +62,14 @@ function displayError(id, message) {
     errorElement.classList.add("d-block");
 }
 
+// function displaySuccess(message) {
+//     var alertMessage = document.getElementById("alertMessage");
+//     alertMessage.textContent = message;
+//     alertMessage.classList.remove("alert-danger", "d-none");
+//     alertMessage.classList.add("alert-success", "d-block");
+// }
 function displaySuccess(message) {
-    var alertMessage = document.getElementById("alertMessage");
-    alertMessage.textContent = message;
-    alertMessage.classList.remove("alert-danger", "d-none");
-    alertMessage.classList.add("alert-success", "d-block");
+    swal(message, "Hurray!!", "success");
 }
 
 function isValidUsername(username) {

@@ -1,0 +1,84 @@
+/* Custom styles (same as the login screen) */
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jumbotron {
+    background-color: #2b8e61;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    height: 80%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    /* color: #333; */
+    /* font-size: 28px; */
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #2b8e61;
+    border-radius: 0;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus input[type="text"]:focus {
+    border-color: #3dbb7f;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #2b8e61;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3dbb7f;
+}
+
+.signup-image {
+    background-image: url('../tinywow_change_bg_photo_33238499.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
