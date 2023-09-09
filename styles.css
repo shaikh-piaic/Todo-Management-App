@@ -1,0 +1,102 @@
+/* Custom styles */
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f0f0f0;
+    /* Light gray background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jumbotron {
+    background-color: #2b8e61;
+    /* Dark green for the jumbotron */
+    color: #fff !important;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0;
+    font-family: 'Pacifico', cursive;
+    /* Custom font */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    /* Increased shadow */
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white background */
+    padding: 30px;
+    /* Increased padding for better spacing */
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    /* Glassmorphism effect */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    /* Increased shadow */
+    height: 500px;
+    /* Adjusted height to fit the viewport */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    /* Increased margin for better spacing */
+    /* color: #333; */
+    /* Dark text color */
+    /* font-size: 28px; */
+    /* Larger font size */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    /* Increased padding for better input field size */
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #2b8e61;
+    /* Dark green border bottom */
+    border-radius: 0;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3dbb7f;
+    /* Light green border color on focus */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #2b8e61;
+    /* Dark green button */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3dbb7f;
+    /* Light green button on hover */
+}
+
+.login-image {
+    background-image: url('./tinywow_change_bg_photo_33238499.png');
+    /* Image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
