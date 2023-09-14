@@ -2,6 +2,7 @@ function validateForm() {
     var email = document.getElementById("email").value;
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
+    var uuid = 1000;
 
     // Validate email format
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -33,8 +34,17 @@ function validateForm() {
         return false; // Prevent form submission
     }
 
+    var userID = users[users?.length - 1]?.uid
+
+    if (userID != null) {
+        userID = ++userID
+    } else {
+        userID = uuid
+    }
+
     // Save user data to local storage
     var userData = {
+        uid: userID,
         email: email,
         username: username,
         password: password

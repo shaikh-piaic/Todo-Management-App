@@ -4,7 +4,6 @@ function validateForm() {
 
     // Retrieve users from local storage
     var users = JSON.parse(localStorage.getItem("users")) || [];
-    var loggedUser = JSON.parse(localStorage.getItem("LoggedIn")) || [];
     // Find user by email
     var user = users.find(function (user) {
         return user.email === email;
@@ -25,12 +24,12 @@ function validateForm() {
 
     // LoggedIn User Detail
     var userData = {
-        email: email,
-        username: user.username,
-        password: password
+        uid: user.uid,
+        email: user.email,
+        username: user.username
     };
-    loggedUser.push(userData);
-    localStorage.setItem("LoggedIn", JSON.stringify(loggedUser));
+    // loggedUser.push(userData);
+    localStorage.setItem("LoggedIn", JSON.stringify(userData));
     // Login successful, display success message
     displaySuccess("Login successful!");
 
