@@ -103,3 +103,9 @@ button[type="submit"]:hover {
     height: 350px;
 
 }
+
+@media(max-width:767px) {
+    .login-image {
+        height: 250px;
+    }
+}

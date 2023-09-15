@@ -78,7 +78,13 @@ button[type="submit"]:hover {
 
 .signup-image {
     background-image: url('../22344054_Tiny\ man\ and\ woman\ standing\ near\ to\ do\ list.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     height: 350px;
+}
+
+@media(max-width:767px) {
+    .signup-image {
+        height: 250px;
+    }
 }
