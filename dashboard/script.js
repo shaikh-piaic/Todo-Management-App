@@ -28,7 +28,7 @@ function Done(id) {
     }
 }
 function Delete(id) {
-    let filteredTodos = userTodo.filter((todo) => todo.id !== id)
+    let filteredTodos = todos.filter((todo) => todo.id !== id)
     localStorage.setItem("Todo", JSON.stringify(filteredTodos))
     setTimeout(function () {
         location.reload()
