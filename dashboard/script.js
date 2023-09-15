@@ -38,9 +38,9 @@ function DeleteAll() {
     let filteredTodos = todos.filter((todo) => todo.uid !== user.uid)
     console.log(filteredTodos)
     localStorage.setItem("Todo", JSON.stringify(filteredTodos))
-    // setTimeout(function () {
-    //     location.reload()
-    // }, 1500);
+    setTimeout(function () {
+        location.reload()
+    }, 1500);
 }
 
 let tble = document.getElementById("tb")
